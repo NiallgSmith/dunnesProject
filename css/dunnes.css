@@ -1,0 +1,18 @@
+.container {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	background-color: green;
+	margin-bottom: 100px;
+	height: 250px; 
+}
+.div {
+	margin: 20px;
+}
+img {
+max-height: 200px;
+border:1px solid black;
+max-width:100%;
+min-width: 190px;
+margin-bottom: 25px;
+}
