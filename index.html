@@ -16,6 +16,7 @@
 		}
 		.div {
 			margin: 20px;
+			margin-bottom: 100px;
 		}
 		img {
 	    max-height: 200px;
@@ -33,21 +34,30 @@ Bootstrap will be primarily used for responsive layouts, jquery for updating htm
 Also for use with sublime text's developer functions to speed up writing the code. -->
 </head>
 <body>
+
+<!-- Partially for ease of use (there are only two options in most selections) and partially to demonstrate that I know what they are, flex boxes are being used. In this simple format, they should allow the site to switch from one view to another with ease -->
+
 <main style="background-color:green;">
 	<h1 align="center"> Welcome to Dunnes Stores!</h1>
-	<h2 align="center"> Time to enjoy a healthy lunch.</h2>
+	<h2 align="center"> Time to enjoy a healthy lunch. Please choose from the options below.</h2>
 	<div class="container">
-		<a href="#" target=""><img src="lunch-box.jpg" alt="Lunch Box" onmouseover="Lunch Box"></a>
-		<a href="#" target="" onmouseover="Sandwich"> <img src="sandwich.jpg" alt="Sandwich"></a>
+		<div><h3>Lunch Box.</h3>
+		<a href="#" target="" onmouseover="Lunch Box"><img src="images\lunch-box.jpg" alt="Lunch Box"></a>
+		</div>
+		<div><h3>Sandwich.</h3>
+		<a href="#" target="" onmouseover="Sandwich"><img src="images\sandwich.jpg" alt="Sandwich"></a>
+		</div>
 	</div>
 
 	<div class = "container">
-		<a href="#" target=""><img src="salmon.jpg" alt="Fish" onmouseover="Fish"></a>
-		<a href="#" target="" onmouseover="Meat"> <img src="steak.jpg" alt="Meat"></a>
+		<div><h3>Fish</h3>
+		<a href="#" target="" onmouseover="Fish"><img src="images\salmon.jpg" alt="Fish"></a></div>
+		<div><h3>Meat</h3>
+		<a href="#" target="" onmouseover="Meat"><img src="images\steak.jpg" alt="Meat"></a></div>
 	</div>		
 
 	<div class = "container">
-		<a href="#" target=""><img src="smokedSalmon.jpg" alt="Smoked Salmon" onmouseover="Smoked Salmon"></a>
+		<a href="#" target="" onmouseover="Smoked Salmon"><img src="images\smokedSalmon.jpg" alt="Smoked Salmon"></a>
 		<a href="#" target="" onmouseover="BBQ Salmon"> <img src="bbqSalmon.jpg" alt="BBQ Salmon"></a>
 		<a href="#" target="" onmouseover="Poached Salmon"> <img src="poachedSalmon.jpg" alt="BBQ Salmon"></a>
 	</div>		
