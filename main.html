@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dunnes Lunch; Healthy Convenient Fast.</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css\dunnes.css">
+
+  <script type="text/javascript">
+    function chkcontrol(j) {
+      var total=0;
+      for(var i=0; i < document.form1.salad.length; i++){
+        if(document.form1.salad[i].checked) {
+          total += 1;
+        }
+        if(total > 3) {
+          alert("Please Select only three") 
+          document.form1.salad[j].checked = false ;
+          return false;
+        }
+      }
+    } 
+  </script>
+	
+</head>
+<body class="container" width="100%">
+
+<main>
+	<h1 align="center"> Welcome to Dunnes Stores!</h1>
+	<h2 align="center"> Time to enjoy a delicious healthy lunch! Please choose from the options below.</h2>
+
+<div id="mainSelect" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <h3>Please choose a main.</h3>
+  <ol class="carousel-indicators smlimg">
+    <li data-target="#mainSelect" data-slide-to="0" class="active"></li>
+    <li data-target="#mainSelect" data-slide-to="1"></li>
+    <li data-target="#mainSelect" data-slide-to="2"></li>
+    <li data-target="#mainSelect" data-slide-to="3"></li>
+    <li data-target="#mainSelect" data-slide-to="4"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+    	<h3>Smoked Salmon</h3>
+      <a href="#saladSelect">
+      <img src="images\smokedSalmon.jpg" alt="Smoked Salmon">
+      </a>
+    </div>
+
+    <div class="item">
+    	<h3>Beef</h3>
+      <a href="#saladSelect">
+      <img src="images\steak.jpg" alt="Beef"> 
+      </a>
+    </div>
+
+    <div class="item">
+    	<h3>BBQ Salmon</h3>
+      <a href="#saladSelect">
+      <img src="images\bbqSalmon.jpg" alt="BBQ Salmon">
+      </a>
+    </div>
+
+    <div class="item">
+    	<h3>Glazed Ham</h3>
+      <a href="#saladSelect">
+      <img src="images\glazedHam.jpg" alt="Glazed Ham">
+      </a>
+    </div>
+
+    <div class="item">
+    	<h3>Poached Salmon</h3>
+      <a href="#saladSelect">
+      <img src="images\poachedSalmon.jpg" alt="Poached Salmon">
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#mainSelect" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#mainSelect" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div id="saladSelect" style="margin-top:100px;">
+ 
+
+ <!--   Now a checkbox form to choose up to three salads. -->
+
+ <form name="form1">
+  <fieldset>
+    <legend><h3>Please choose three Salads.</h3></legend>
+ 
+    <label>
+    <input type="checkbox" name="salad" value="beetroot" onclick='chkcontrol(0)'/>
+    <div>
+    	<h3>Beetroot salad</h3>
+      <img src="images\beetroot.jpg" alt="Beetroot">
+    </div>
+    </label>
+
+    <label>
+    <input type="checkbox" name="salad" value="noodles" onclick='chkcontrol(0)'/>
+    <div>
+    	<h3>Noodles</h3>
+      <img src="images\noodles.jpg" alt="Noodles">
+    </div>
+    </label>
+
+    <label>
+    <input type="checkbox" name="salad" value="coleslaw" onclick='chkcontrol(0)'/>
+    <div>
+    	<h3>Coleslaw</h3>
+      <img src="images\coleslaw.jpg" alt="Coleslaw">
+    </div>
+    </label>
+
+    <label>
+    <input type="checkbox" name="salad" value="broccoli" onclick='chkcontrol(0)'/>
+    <div>
+    	<h3>Broccoli</h3>
+      <img src="images\broccoli.jpg" alt="Broccoli">
+    </div>
+    </label>
+
+    <label>
+    <input type="checkbox" name="salad" value="veg" onclick='chkcontrol(0)'/>
+    <div>
+    	<h3>Meditteranian Vegtables</h3>
+      <img src="images\medVeg.jpg" alt="Meditteranian Vegtables">
+    </div>
+    </label>
+  </fieldset>
+</form>
+</div>
+
+<div>
+	<h3>Finished!</h3>
+	<p>Please enter your full name below. Your order will be ready for collection in the food dept!</p>
+	<form style="margin-bottom:50px;"><input type="text" name="Name">  <input type="Submit" name="finished"> </form>
+</div>
+
+
+</main>
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>
